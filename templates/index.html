@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据源搜索引擎 - Data Source Search Engine</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>数据源搜索引擎</h1>
+            <p class="subtitle">Data Source Search Engine for Multi-Information Platform</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-form">
+                <input type="text" id="searchQuery" placeholder="搜索数据源... (Search data sources...)" />
+                <select id="categoryFilter">
+                    <option value="">所有分类 (All Categories)</option>
+                </select>
+                <button id="searchBtn">搜索 (Search)</button>
+                <button id="clearBtn">清除 (Clear)</button>
+            </div>
+            
+            <div class="filters">
+                <div class="tags-section">
+                    <label>标签筛选 (Filter by Tags):</label>
+                    <div id="tagsList" class="tags-container"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <div class="stats-card">
+                <span class="stats-label">数据源总数 (Total Sources):</span>
+                <span id="totalSources" class="stats-value">-</span>
+            </div>
+            <div class="stats-card">
+                <span class="stats-label">搜索结果 (Search Results):</span>
+                <span id="searchResults" class="stats-value">-</span>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <div id="resultsContainer"></div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
